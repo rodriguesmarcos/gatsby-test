@@ -35,9 +35,10 @@ const Blog = props => {
       },
     },
   }
+
   return (
     <DefaultLayout>
-      <Img fluid={props.data.contentfulBlogPost.thumb.fluid} />
+      {post.thumb && <Img fluid={post.thumb.fluid} />}
       <p>{post.publishedDate}</p>
       <h1>{post.title}</h1>
 
